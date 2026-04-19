@@ -4,10 +4,6 @@ FROM python:3.10-slim
 # تنظیم دایرکتوری کاری داخل کانتینر
 WORKDIR /app
 
-# کپی کردن فایل نیازمندی‌ها و نصب آن‌ها
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt -i https://mirror.iranserver.com/pypi/simple
-
 # کپی کردن فایل اصلی ورکر
 COPY worker.py .
 
