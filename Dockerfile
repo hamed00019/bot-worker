@@ -6,7 +6,7 @@ WORKDIR /app
 
 # کپی کردن فایل نیازمندی‌ها و نصب آن‌ها
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt -i https://mirror.iranserver.com/pypi/simple
 
 # کپی کردن فایل اصلی ورکر
 COPY worker.py .
